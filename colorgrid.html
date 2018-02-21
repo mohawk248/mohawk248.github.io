@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Color Grid Page</title>
+  <link rel="stylesheet" type="text/css" href="colorgrid/styles/style.css">
+</head>
+
+<body>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="timer.html">Timer</a></li>
+    <li><a class="active" href="colorgrid.html">Color Grid</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+  </ul>
+  <div class='body'>
+  <!--Colors you can pick-->
+    <center>
+      <p>Red:
+      <br/>
+      <span id="RedColor">128</span>
+      <br/>
+      <input type="range" id="red" oninput="colorSlider()" min="0" max="255" value="128">
+      </p>
+      <p>
+        Green:
+        <br/>
+        <span id="GreenColor">128</span>
+        <br/>
+        <input type="range" id="green" oninput="colorSlider()" min="0" max="255">
+      </p>
+      <p>
+        Blue:
+        <br/>
+        <span id="BlueColor">128</span>
+        <br/>
+        <input type="range" id="blue" oninput="colorSlider()" min="0" max="255">
+      </p>
+      <p>
+        Color<br/>
+        <input type="button" onclick="ColorButton()" id="box" class="r">
+      </p>
+    </center>
+    <table>
+      <!--First row in drawing grid-->
+        <tr>
+          <th><input type="button" onclick="OneA()" id="OneA" class="r"></th>
+          <th><input type="button" onclick="OneB()" id="OneB" class="r"></th>
+          <th><input type="button" onclick="OneC()" id="OneC" class="r"></th>
+          <th><input type="button" onclick="OneD()" id="OneD" class="r"></th>
+          <th><input type="button" onclick="OneE()" id="OneE" class="r"></th>
+        </tr>
+      <!--Second row in drawing grid-->
+        <tr>
+          <th><input type="button" onclick="TwoA()" id="TwoA" class="r"></th>
+          <th><input type="button" onclick="TwoB()" id="TwoB" class="r"></th>
+          <th><input type="button" onclick="TwoC()" id="TwoC" class="r"></th>
+          <th><input type="button" onclick="TwoD()" id="TwoD" class="r"></th>
+          <th><input type="button" onclick="TwoE()" id="TwoE" class="r"></th>
+        </tr>
+      <!--Third row in drawing grid-->
+        <tr>
+          <th><input type="button" onclick="ThreeA()" id="ThreeA" class="r"></th>
+          <th><input type="button" onclick="ThreeB()" id="ThreeB" class="r"></th>
+          <th><input type="button" onclick="ThreeC()" id="ThreeC" class="r"></th>
+          <th><input type="button" onclick="ThreeD()" id="ThreeD" class="r"></th>
+          <th><input type="button" onclick="ThreeE()" id="ThreeE" class="r"></th>
+        </tr>
+      <!--Fourth row in drawing grid-->
+        <tr>
+          <th><input type="button" onclick="FourA()" id="FourA" class="r"></th>
+          <th><input type="button" onclick="FourB()" id="FourB" class="r"></th>
+          <th><input type="button" onclick="FourC()" id="FourC" class="r"></th>
+          <th><input type="button" onclick="FourD()" id="FourD" class="r"></th>
+          <th><input type="button" onclick="FourE()" id="FourE" class="r"></th>
+        </tr>
+      <!--Fourth row in drawing grid-->
+        <tr>
+          <th><input type="button" onclick="FiveA()" id="FiveA" class="r"></th>
+          <th><input type="button" onclick="FiveB()" id="FiveB" class="r"></th>
+          <th><input type="button" onclick="FiveC()" id="FiveC" class="r"></th>
+          <th><input type="button" onclick="FiveD()" id="FiveD" class="r"></th>
+          <th><input type="button" onclick="FiveE()" id="FiveE" class="r"></th>
+        </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="colorgrid/script/script.js"></script>
+</body>
+
+</html>
