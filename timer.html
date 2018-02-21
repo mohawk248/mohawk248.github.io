@@ -1,1 +1,28 @@
-Hello
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Timer Project</title>
+  <link rel="stylesheet" type="text/css" href="timer/styles/style.css">
+  <script type="text/javascript" src="timer/script/script.js"></script>
+</head>
+
+<body>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="timer.html">Timer</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+  </ul>
+  
+  <div class="timer">
+    <center>
+      <input type="button" onclick="timeStart()" value="Start Timer" class="button start"><br/>
+      <input type="button" onclick="timeStop()" value="Stop Timer" class="button stop"><br/>
+      <input type="button" onclick="timeReset()" value="Reset Timer" class="button reset">
+      <p class="thing"><span id="minute">00</span>:<span id="second">00</span>:<span id="milsecond">00</span></p>
+    </center>
+  </div>
+</body>
+
+</html>
