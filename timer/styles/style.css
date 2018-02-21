@@ -1,1 +1,54 @@
-Thing
+body {
+  background: grey;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.timer {
+  position: relative;
+  top: 10px;
+}
+.button {
+  border: none;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 100px;
+  background-color: #d3d3d3;
+}
+.start {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
