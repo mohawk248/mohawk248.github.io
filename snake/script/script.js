@@ -1,15 +1,20 @@
-var c = document.getElementById("SnakeGamePad");
-var ctx = c.getContext("2d");
-var left = 10, up = 10, right = 0, down = 0;
-var hor = 10, ver = 10;
-var hori, vert;
 var stop = 0;
-var score = 0;
 var start = 0;
-var big = 0;
-var big1 = 1;
 
 GridS();
+//Canvas//
+  var c = document.getElementById("SnakeGamePad");
+  var ctx = c.getContext("2d");
+  var left = 10, up = 10, right = 0, down = 0;
+  var hor = 10, ver = 10;
+  var hori, vert;
+
+//Score//
+  var big = 0;
+  var big1 = 1;
+  var HiScore = 0;
+  var score = 0;
+
 //settings//
 
   //size of moving//
@@ -20,8 +25,11 @@ GridS();
   //How big each box of the snake is//
     var rectsize = 10;
 
-  //Snake color//
+  //Food color//
     var food_color = "green";
+
+  //Snake color//
+    var Snake_color = "red";
 
   //Canvas settings//
     var w = 300;
@@ -91,6 +99,8 @@ GridS();
         break;
     }
   }
+
+//Movement//
   function AllMovement() {
     switch(stop) {
       case "left":
@@ -124,7 +134,7 @@ GridS();
      }
     if(big == big1) {ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, w, h); big = 0;}
     else { big = big + 1;}
-    ctx.fillStyle ="#ff0000";
+    ctx.fillStyle = Snake_color;
     GridS();
     ctx.fillRect(ver - rectsize, hor - rectsize, rectsize, rectsize);
     ctx.fillStyle = food_color;
@@ -142,6 +152,10 @@ GridS();
 
 //ReStart//
   function ReStart() {
+    if (score > HiScore) {
+      HiScore = score;
+      document.getElementById("HighScore").innerHTML = HiScore;
+    }
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, w, h);
     hor = 10;
@@ -156,6 +170,8 @@ GridS();
     clearInterval(a);
     on();
   }
+
+//Game Over OverLay//
   function on() {
     document.getElementById("overlay").style.display = "block";
   }
