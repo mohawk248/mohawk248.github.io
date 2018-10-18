@@ -132,7 +132,11 @@ GridS();
         }
         break;
      }
-    if(big == big1) {ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, w, h); big = 0;}
+    if(big == big1) {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, w, h);
+      big = 0;
+    }
     else { big = big + 1;}
     ctx.fillStyle = Snake_color;
     GridS();
